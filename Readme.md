@@ -1,43 +1,24 @@
-# Личный проект «Глейси»
+EmailCountdown
+==============
 
-* Студент: [Стас Посох](https://htmlacademy.ru/profile/id113175).
-* Наставник: Наталья Ёркина.
 
----
+**What does this do?**
 
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitignore`, `Readme.md`._
+Creates a countdown image counting down to a specific time/date for use in email campaigns.
 
----
+**How does it work?**
 
-### Памятка
+This generates an image based on the following variables:
 
-#### 1. Зарегистрируйтесь на Гитхабе
+```php
+  $image = imagecreatefrompng('images/countdown.png');
+  $font = array(
+    'size'=>23, // Font size, in pts usually.
+    'angle'=>0, // Angle of the text
+    'x-offset'=>7, // The larger the number the further the distance from the left hand side, 0 to align to the left.
+    'y-offset'=>30, // The vertical alignment, trial and error between 20 and 60.
+    'file'=>'./GillSans.ttc', // Font path
+    'color'=>imagecolorallocate($image, 55, 160, 130), // RGB Colour of the text
+  );
+```
 
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
-
-#### 2. Создайте форк
-
-[Откройте репозиторий](https://github.com/htmlacademy-htmlcss/113175-gllacy) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии скопируется в ваш аккаунт.
-
-<img width="769" alt="" src="https://cloud.githubusercontent.com/assets/10909/12391926/4aaa72b0-bdfc-11e5-9324-e0597e8e0084.jpg">
-
-Получится вот так:
-
-<img width="769" alt="" src="https://cloud.githubusercontent.com/assets/10909/12391927/4ad24f1a-bdfc-11e5-83e9-eb692950a6e5.jpg">
-
-#### 3. Клонируйте репозиторий на свой компьютер
-
-Будтьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Нажмите кнопку с иконкой компьютера и стрелкой, чтобы клонировать репозиторий через программу [GitHub Desktop](https://desktop.github.com):
-
-<img width="769" alt="" src="https://cloud.githubusercontent.com/assets/10909/12391902/17d49924-bdfc-11e5-8864-05fbcbddbb90.jpg">
-
-Программа клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
-
-#### 4. Начинайте обучение!
-
----
-
-<a href="https://htmlacademy.ru/intensive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/htmlcss/logo-for-github.svg"></a>
-
-Репозиторий создан для обучения на интенсивном онлайн‑курсе «[Базовый HTML и CSS](https://htmlacademy.ru/intensive)» от [HTML Academy](https://htmlacademy.ru).
