@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>IgorEat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+  <article class="select">
+    <section class="filter">
+      <form action="/echo" method="post">
+        <div class="filter__name">
+          <header class="filter__header">По названию</header>
+          <a class="filter__link" href="#">не важно</a>
+          <input id="filter__search" type="text" placeholder="Введите название блюда" value="" name="search" list="search">
+          <datalist id="search">
+            <option>Перчик</option>
+            <option>Огуречик</option>
+            <option>Капустка</option>
+            <option>Помидорина</option>
+            <option>Алыча как саранча</option>
+            <option>Брокколи наколи на кол</option>
+          </datalist>
+        </div>
+        <div class="filter__time">
+          <header class="filter__header">Время</header>
+          <a class="filter__link" href="#">не важно</a>
+          <div class="lasting filter__lasting">
+            <input class="lasting__btn lasting__btn--five" id="five" type="checkbox" value="">
+            <label for="five">минут</label>
+            <input class="lasting__btn lasting__btn--ten" id="ten" type="checkbox" value="">
+            <label for="ten">минут</label>
+            <input class="lasting__btn lasting__btn--twenty" id="twenty" type="checkbox" value="">
+            <label for="twenty">минут</label>
+            <input class="lasting__btn lasting__btn--thirty" id="thirty" type="checkbox" value="">
+            <label for="thirty">минут</label>
+          </div>
+        </div>
+        <div class="filter__type">
+          <header class="filter__header">Тип еды</header>
+          <a class="filter__link" href="#">не важно</a>
+          <ul class="cuisine">
+            <li>
+              <label class="cuisine__type" for="veg">
+                <input id="veg" type="checkbox" value="">Вегетарианская
+              </label>
+            </li>
+            <li>
+              <label class="cuisine__type" for="euro">
+                <input id="euro" type="checkbox" value="">Европейская 
+              </label>
+            </li>
+            <li>
+              <label class="cuisine__type" for="jap">
+                <input id="jap" type="checkbox" value="">Японская
+              </label>
+            </li>
+            <li>
+              <label class="cuisine__type" for="ital">
+                <input id="ital" type="checkbox" value="">Итальянская
+              </label>
+            </li>
+          </ul>
+        </div>
+        <button class="btn filter__btn filter__btn--disabled" disabled>Подобрать и съесть</button>
+      </form>
+    </section>
+    <section class="result">
+      <div class="result__output">
+        <p class="result__text result__text--nofilter">Выберите, что хотите приготовить</p>
+        <p class="result__text result__text--nomatches">Данного рецепта нет в системе</p>
+        <div class="result__count-matches">
+          <p>Найденo: <span class="result__counter">0</span></p>
+          <a class="btn result__btn" href="#">Сбросить</a>
+        </div>
+        <div class="result__recipe">
+        </div>
+      </div>
+    </section>
+  </article>
+  <footer class="footer">
+    <a href="#">info@cookhelp.ru</a>
+  </footer>
+  <script type="text/javascript" src="./js/filter.js"></script>
+  <script src="./js/handlebars.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Спагетти Карбонара</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+  <article class="recipe recipe--instruction">
+    <section class="recipe__intro">
+      
+    </section>
+    <section class="steps">
+      
+    </section>
+    <section class="ingredient">
+    
+    </section>
+  </article>
+  <footer class="footer">
+    <a href="#" class="email">info@cookhelp.ru</a>
+  </footer>
+  <div class="popup">
+    <form class="popup__form" action="/echo" method="post">
+      <label for="sms">Текст</label>
+      <textarea id="sms" class="popup__sms" name="sms" cols="30" rows="4">Я собираюсь приготовить блюдо "Спагетти Карбонара", но мне не хватает несколько ингредиентов. По возможности купи, пожалуйста, по пути:</textarea>
+      <ul>
+        <li>
+          <label for="spaghetti"><input id="spaghetti" class="popup__buy"type="checkbox" checked>спаггети (250 г)</label>
+        </li>
+        <li>
+          <label for="cream"><input id="cream" class="popup__buy"type="checkbox" checked>сливки 20% (200 мл)</label>
+        </li>
+        <li>
+          <label for="egg"><input id="egg" class="popup__buy"type="checkbox" checked>яйцо куриное (4 штуки)</label>
+        </li>
+      </ul>
+      <label for="phone">Номер:</label>
+      <input id="phone" type="tel" pattern="[1]{+}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="+7 911 911 11 11" required>
+      <input id="send" class="btn popup__btn" type="submit" value="Отправить" disabled>
+    </form>
+  </div>
+  <script src="./js/handlebars.js"></script>
+  <script src="./js/recipe.js"></script>
+</body>
+</html>
